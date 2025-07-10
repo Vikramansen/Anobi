@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Chat{% endblock %}
+{% block content %}
+  <h4>AI Agent</h4>
+  <form method="post">
+    <div class="input-field">
+      <textarea id="message" name="message" class="materialize-textarea" placeholder="Ask me about your marketing..."></textarea>
+      <label for="message">Message</label>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit">Send</button>
+  </form>
+  {% if response %}
+    <div class="card-panel teal lighten-4" style="margin-top:20px;">
+      <strong>Agent:</strong> {{ response }}
+    </div>
+  {% endif %}
+{% endblock %}

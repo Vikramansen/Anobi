@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+  <h4>Welcome to the Marketing Dashboard</h4>
+  <div class="section">
+    <h5>Latest News</h5>
+    <ul class="collection">
+      {% for item in news %}
+        <li class="collection-item">{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="section">
+    <h5>Best Times to Post</h5>
+    <ul class="collection">
+      {% for time in times %}
+        <li class="collection-item">{{ time }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <a class="btn waves-effect waves-light" href="{{ url_for('chat') }}">Chat with AI Agent</a>
+{% endblock %}
