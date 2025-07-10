@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <div class="section center-align">
+    <h3>Welcome to Anobi</h3>
+    <p>Your one stop portal for marketing insights and AI-driven content tips.</p>
+    <a class="btn waves-effect waves-light" href="{{ url_for('login') }}">Login</a>
+    <a class="btn waves-effect waves-light teal" href="{{ url_for('register') }}">Register</a>
+  </div>
+{% endblock %}
